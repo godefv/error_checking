@@ -1,5 +1,7 @@
 # return status
 
+## Motivation
+
 Some functions may encounter errors, in which case it is desirable to communicate those errors to the caller. There are a few common ways to do it :
 
 **1. Display an error message or warning, possibly in a file, stdout, stderr, or a gui.**
@@ -48,7 +50,7 @@ In this case, there is no clue that the function might encounter an error. One h
 
 None of the above is satisfactory. The purpose of the `return_status_t` and `return_value_and_status_t<T>` classes is to fill this gap. 
 
-Usage of `return_status_t` :
+##Usage of `return_status_t` :
 ```
 //define a function which may encounter an error
 return_status_t do_stuff(){
@@ -69,7 +71,7 @@ do_stuff().on_error(return_status_t::exit{});
 do_stuff().on_error(return_status_t::throw_{});
 ```
 
-Usage of `return_value_and_status_t<T>` :
+## Usage of `return_value_and_status_t<T>` :
 ```
 //define a function which may encounter an error or return a value
 return_value_and_status_t<toto_t> do_stuff(){
