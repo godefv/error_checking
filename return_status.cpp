@@ -16,7 +16,7 @@ return_status_t::operator bool() const{
 return_status_t::print::print(std::ostream& o):out(o){}
 
 void return_status_t::print::operator()(return_status_t const& e) const{
-	out<<e.msg;
+	out<<e.msg<<std::endl;
 }
 
 /* return_status_t::throw_:: */
